@@ -7,10 +7,10 @@ The adjacency list representation of the tree allows for easy traversal and effi
 
 # Approach
 1. Phase 1: We start from a specific root node (e.g., node 0) and perform a DFS to calculate the sum of distances (distSum) from the root node to all other nodes. This also calculates the size of each subtree (subtreeSize) rooted at each node during traversal. This information is gathered using recursion and the adjacency list representation of the tree.
-2. Phase 2: Using the information from the first phase, we calculate the sum of distances for each node. Starting again from the root node, we iterate through all adjacent nodes and adjust the sum of distances based on the distances calculated in the first phase. 
-
-This formula efficiently recalculates the sum of distances for each node without needing to repeat the traversal process from each node.
+   
+2. Phase 2: Using the information from the first phase, we calculate the sum of distances for each node. Starting again from the root node, we iterate through all adjacent nodes and adjust the sum of distances based on the distances calculated in the first phase.  This formula efficiently recalculates the sum of distances for each node without needing to repeat the traversal process from each node.
+   
 3. The results from the two phases provide the sum of distances for each node, which can be returned as the final answer.
 # Complexity
 - Time complexity: The time complexity of the approach is O(n). Both phases consist of traversals through the tree, which is done in linear time since each node and edge is visited once.
-- Space complexity: The space complexity is also O(n). The main storage requirements come from the adjacency list representation of the tree and the arrays for distSum and subtreeSize, all of which require space proportional to the number of nodes.
+- Space complexity: The space complexity is also O(n). The main storage requirements come from the adjacency list representation of the tree and the arrays for distSum and subtree size, all of which require space proportional to the number of nodes.
